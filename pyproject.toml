@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rndi-dicontainer"
-version = "0.1.0"
+version = "1.0.0"
 description = "Provides the DIContainer interface along with a default implementation based in PInject Google Project."
 authors = ["Unay Santisteban <davidunay.santisteban@cloudblue.com>"]
 license = "Apache-2.0"
@@ -11,7 +11,6 @@ packages = [
 repository = ""
 classifiers = [
     "Development Status :: 5 - Production/Stable",
-    "Environment :: Console",
     "Operating System :: OS Independent",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3.7",
@@ -64,6 +63,7 @@ exclude_lines = [
     "import",
     "raise NotImplementedError",
     "if __name__ == .__main__.:",
+    '@(abc\.)?abstractmethod'
 ]
 
 [tool.coverage.html]
