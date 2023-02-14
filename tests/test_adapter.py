@@ -1,9 +1,7 @@
 import pytest
-
 from rndi.dicontainer.adapter import Container
 from rndi.dicontainer.exceptions import DependencyBuildingFailure, InvalidClassType
-
-from tests.sample import SampleServiceProvider, Sample, SampleWithMissingDependency
+from tests.sample import Sample, SampleServiceProvider, SampleWithMissingDependency
 
 
 def test_container_should_provide_required_instance_using_dependencies_from_service_provider():
@@ -14,7 +12,7 @@ def test_container_should_provide_required_instance_using_dependencies_from_serv
     assert service.foo == SampleServiceProvider.FOO
     assert service.bar == SampleServiceProvider.BAR
     assert service.greeting == SampleServiceProvider.GREETING_TPL.format(
-        name=SampleServiceProvider.NAME
+        name=SampleServiceProvider.NAME,
     )
 
 
